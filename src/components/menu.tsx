@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 
 export function Menu() {
   return (
-    <header className="fixed top-2 left-1/2 -translate-x-1/2  bg-[red] rounded-[200px] h-12 w-5/12">
-      <nav className="flex items-center justify-between p-1">
+    <header className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)]  border border-gray-200 rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur">
+      <nav className="flex items-center justify-between gap-6">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center justify-center">
           <div className="w-8 h-8 flex items-center justify-center">
             <svg
-              width="354"
-              height="311"
+              width="53"
+              height="46"
               viewBox="0 0 354 311"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -23,37 +23,69 @@ export function Menu() {
         </div>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center gap-6">
           <a
             href="#apresentacao"
-            className="text-primary hover:text-accent transition-colors"
+            className="text-[var(--orange-bg)] font-semibold hover:text-accent transition-colors"
           >
             Apresentação
           </a>
           <a
             href="#sobre"
-            className="text-foreground hover:text-primary transition-colors"
+            className="text-white font-semibold hover:text-primary transition-colors"
           >
             Sobre mim
           </a>
           <a
             href="#projetos"
-            className="text-foreground hover:text-primary transition-colors"
+            className="text-white font-semibold hover:text-primary transition-colors"
           >
             Projetos
           </a>
           <a
             href="#contato"
-            className="text-foreground hover:text-primary transition-colors"
+            className="text-white font-semibold hover:text-primary transition-colors"
           >
             Contato
           </a>
         </div>
 
         {/* Download CV Button */}
-        <Button className="bg-primary hover:bg-accent text-primary-foreground">
+        <Button className="bg-[var(--orange-bg)] rounded-xl2 hover:bg-accent text-primary-foreground cursor-pointer">
           Download CV
         </Button>
+
+        <div className="flex">
+          <Button variant="ghost">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2.44463 12.5841L3.40599 13.5455L4.63327 12.325L3.66508 11.3568M8.20599 3.65909C5.94918 3.65909 4.11508 5.49318 4.11508 7.75C4.11508 10.0068 5.94918 11.8409 8.20599 11.8409C10.4628 11.8409 12.2969 10.0068 12.2969 7.75C12.2969 5.48636 10.4628 3.65909 8.20599 3.65909ZM13.6605 8.43182H15.706V7.06818H13.6605M11.7787 12.325L13.006 13.5455L13.9674 12.5841L12.7469 11.3568M13.9674 2.97727L13.006 2.02273L11.7787 3.24318L12.7469 4.21136M8.88781 0.25H7.52418V2.29545H8.88781M4.63327 3.24318L3.40599 2.02273L2.44463 2.97727L3.66508 4.21136L4.63327 3.24318ZM0.705994 8.43182H2.75145V7.06818H0.705994M8.88781 13.2045H7.52418V15.25H8.88781"
+                fill="#E4E4E4"
+              />
+            </svg>
+          </Button>
+
+          <Button variant="ghost">
+            <svg
+              width="11"
+              height="16"
+              viewBox="0 0 11 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3.01403 0.250009C2.23108 0.248797 1.4526 0.365162 0.705994 0.595009C2.26808 1.07357 3.63281 2.0255 4.60164 3.31233C5.57048 4.59917 6.0929 6.15377 6.0929 7.75C6.0929 9.34624 5.57048 10.9008 4.60164 12.1877C3.63281 13.4745 2.26808 14.4264 0.705994 14.905C1.76389 15.2291 2.88115 15.3264 3.98123 15.1903C5.08131 15.0542 6.13821 14.6879 7.07951 14.1164C8.02081 13.5449 8.82426 12.7819 9.43482 11.8795C10.0454 10.9771 10.4486 9.95665 10.6169 8.88815C10.7852 7.81965 10.7145 6.72831 10.4098 5.68891C10.105 4.64951 9.57341 3.68662 8.85132 2.8662C8.12923 2.04578 7.23374 1.38723 6.22622 0.935675C5.21869 0.484116 4.12293 0.250218 3.01403 0.250009Z"
+                fill="#E4E4E4"
+              />
+            </svg>
+          </Button>
+        </div>
       </nav>
     </header>
   );
