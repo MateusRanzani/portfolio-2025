@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function Menu() {
   return (
-    <header className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)]  border border-gray-200 rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur">
+    <header className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)] rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur">
       <nav className="flex items-center justify-between gap-6">
         {/* Logo */}
         <div className="flex items-center justify-center">
@@ -26,32 +26,32 @@ export function Menu() {
         <div className="hidden md:flex items-center gap-6">
           <a
             href="#apresentacao"
-            className="text-[var(--orange-bg)] font-semibold hover:text-accent transition-colors"
+            className="text-[var(--orange-bg)] font-medium hover:text-accent transition-colors"
           >
             Apresentação
           </a>
           <a
             href="#sobre"
-            className="text-white font-semibold hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors"
           >
             Sobre mim
           </a>
           <a
             href="#projetos"
-            className="text-white font-semibold hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors"
           >
             Projetos
           </a>
           <a
             href="#contato"
-            className="text-white font-semibold hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors"
           >
             Contato
           </a>
         </div>
 
         {/* Download CV Button */}
-        <Button className="bg-[var(--orange-bg)] rounded-xl2 hover:bg-accent text-primary-foreground cursor-pointer">
+        <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer">
           Download CV
         </Button>
 
