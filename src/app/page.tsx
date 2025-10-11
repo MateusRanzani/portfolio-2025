@@ -110,7 +110,7 @@ export default function Home() {
         </div>
       </main>
       <div className="w-full px-12 my-14">
-        <div className="py-4 px-12 flex justify-between items-center bg-[var(--primary-bg)] rounded-xl">
+        <div className="py-4 px-12 flex justify-between items-center bg-[var(--primary-bg)] rounded-2xl">
           <svg
             width="40"
             height="40"
@@ -310,7 +310,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_94_445)">
+            <g clipPath="url(#clip0_94_445)">
               <mask
                 id="mask0_94_445"
                 style={{ maskType: "luminance" }}
@@ -394,7 +394,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_94_463)">
+            <g clipPath="url(#clip0_94_463)">
               <mask
                 id="mask0_94_463"
                 style={{ maskType: "luminance" }}
@@ -411,8 +411,8 @@ export default function Home() {
               </mask>
               <g mask="url(#mask0_94_463)">
                 <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
+                  fillRule="evenodd"
+                  clipRule="evenodd"
                   d="M33.2273 0C24.5606 0 19.144 4.36364 16.9773 13.0909C20.2273 8.72727 24.019 7.09091 28.3523 8.18182C30.8247 8.80364 32.5917 10.6109 34.5478 12.6097C37.734 15.8667 41.4221 19.6364 49.4773 19.6364C58.144 19.6364 63.5606 15.2727 65.7273 6.54545C62.4773 10.9091 58.6856 12.5455 54.3523 11.4545C51.8799 10.8327 50.1129 9.02545 48.1568 7.02667C44.9706 3.7697 41.2825 0 33.2273 0ZM16.9773 19.6364C8.31063 19.6364 2.89396 24 0.727295 32.7273C3.9773 28.3636 7.76896 26.7273 12.1023 27.8182C14.5747 28.4412 16.3417 30.2473 18.2978 32.2461C21.484 35.503 25.1721 39.2727 33.2273 39.2727C41.894 39.2727 47.3106 34.9091 49.4773 26.1818C46.2273 30.5455 42.4356 32.1818 38.1023 31.0909C35.6299 30.4691 33.8629 28.6618 31.9068 26.663C28.7206 23.4061 25.0325 19.6364 16.9773 19.6364Z"
                   fill="#38BDF8"
                 />
@@ -436,7 +436,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_94_470)">
+            <g clipPath="url(#clip0_94_470)">
               <path
                 d="M46.1957 23.0208C44.3324 23.0208 42.6762 23.4375 41.3305 24.0625C40.8129 23.125 40.3988 22.2917 40.2953 21.5625C40.1918 20.8333 40.0883 20.4167 40.1918 19.4792C40.2953 18.5417 40.8129 17.2917 40.8129 17.1875C40.8129 17.1875 40.7094 16.6667 39.6742 16.6667C38.5355 16.6667 37.6039 16.875 37.5004 17.1875L37.0863 18.75C36.8793 19.6875 35.016 23.2292 33.8773 25C33.4633 24.2708 33.1527 23.6458 33.1527 23.2292C33.0492 22.3958 32.9457 21.9792 33.0492 21.0417C33.1527 20.1042 33.6703 18.9583 33.6703 18.8542C33.6703 18.75 33.5668 18.2292 32.5316 18.2292C31.393 18.2292 30.4613 18.4375 30.3578 18.75L29.9438 20.3125L26.4242 28.2292L25.5961 30.1042C25.3891 30.5208 25.5961 30.1042 25.5961 30.2083L25.2855 30.7292L24.8715 31.25C24.8715 31.25 24.768 30.5208 24.975 29.5833C25.2855 27.6042 26.2172 24.4792 26.2172 24.2708C26.2172 24.2708 26.4242 23.75 25.5961 23.4375C24.8715 23.125 24.6645 23.6458 24.5609 23.6458L24.4574 23.75C24.4574 23.75 25.2855 20.2083 22.8012 20.2083C21.352 20.2083 19.1781 21.9792 18.143 23.4375L14.6234 25.4167L12.8637 26.3542L12.7602 26.25C9.7582 23.0208 4.27187 20.8333 4.58242 16.5625C4.58242 15 5.20351 10.9375 15.0375 5.9375C23.2152 1.875 29.6332 3.02083 30.7719 5.52083C32.4281 9.0625 27.3559 15.625 18.8676 16.5625C15.6586 16.875 14.0023 15.625 13.5883 15.2083C13.1742 14.6875 13.0707 14.6875 12.8637 14.7917C12.6566 14.8958 12.7602 15.3125 12.8637 15.625C13.1742 16.25 14.2094 17.3958 15.9691 18.0208C17.5219 18.5417 21.2484 18.8542 25.8031 17.0833C30.8754 15.1042 34.9125 9.58333 33.7738 4.89583C32.5316 0.208332 24.768 -1.35417 17.5219 1.25C13.0707 2.8125 8.4125 5.3125 4.99648 8.54167C0.959373 12.2917 0.338279 15.625 0.545311 16.9792C1.58047 21.875 8.20547 25.1042 10.8969 27.3958L10.5863 27.6042C9.24062 28.3333 4.06484 31.0417 2.82265 33.8542C1.37344 37.0833 3.02969 39.375 4.16836 39.6875C7.58437 40.7292 11.2074 38.9583 13.0707 36.1458C14.934 33.2292 14.727 29.4792 13.8988 27.8125L13.7953 27.7083L14.934 27.0833L16.7973 26.0417C16.4867 26.9792 16.2797 28.0208 16.1762 29.5833C15.9691 31.3542 16.7973 33.75 17.7289 34.6875C18.143 35.1042 18.6605 35.1042 18.9711 35.1042C20.1098 35.1042 20.6273 34.1667 21.2484 33.0208L22.5941 30.1042C22.5941 30.1042 21.766 34.375 23.9398 34.375C24.6645 34.375 25.4926 33.4375 25.8031 32.9167L25.9066 32.8125L26.0102 32.6042L28.0805 28.75L30.6684 22.8125L31.1859 24.8958C31.393 25.7292 31.9105 26.5625 32.2211 27.3958L31.807 28.125L30.9789 29.1667C29.9438 30.4167 28.598 31.875 28.4945 32.2917C28.2875 32.8125 28.2875 33.125 28.7016 33.4375C29.0121 33.6458 29.5297 33.6458 30.0473 33.6458L31.9105 33.2292L33.6703 32.2917C34.7055 31.5625 35.3266 30.4167 35.223 28.9583C35.223 28.2292 34.9125 27.3958 34.602 26.6667L34.9125 26.25C36.5688 23.8542 37.8109 21.1458 37.8109 21.1458L38.3285 23.3333L39.2602 25.4167C38.0247 26.4051 37.0623 27.6964 36.4652 29.1667C35.8441 30.9375 36.2582 31.6667 37.1898 31.875C37.6039 31.9792 38.225 31.7708 38.6391 31.5625C39.1566 31.4583 39.7777 31.1458 40.3988 30.7292C41.434 29.8958 42.4691 28.8542 42.3656 27.3958C42.3656 26.7708 42.1586 26.0417 41.9516 25.4167C43.1938 24.8958 44.9535 24.5833 47.0238 24.8958C51.682 25.4167 52.6137 28.3333 52.4066 29.4792C52.1996 30.7292 51.268 31.3542 50.9574 31.5625L50.5434 31.9792C50.6469 32.1875 50.7504 32.1875 51.0609 32.1875C51.3715 32.0833 53.4418 31.1458 53.5453 28.9583C53.6488 26.0417 50.9574 22.9167 46.1957 23.0208ZM10.5863 35C9.13711 36.6667 6.96328 37.3958 6.03164 36.7708C5.1 36.25 5.41055 33.75 7.37734 31.9792C8.51602 30.9375 9.96523 29.8958 10.8969 29.2708L11.8285 28.75L11.932 28.6458L12.2426 28.5417C12.8637 31.0417 12.2426 33.2292 10.5863 35ZM21.766 27.3958C21.2484 28.75 20.1098 32.0833 19.4887 31.875C18.8676 31.7708 18.557 29.1667 19.2816 26.6667C19.6957 25.4167 20.6273 23.9583 21.1449 23.3333C21.973 22.3958 22.9047 22.0833 23.1117 22.5C23.4223 23.0208 22.0766 26.5625 21.766 27.3958ZM30.9789 31.875L30.4613 31.9792V31.7708L32.1176 30L33.0492 28.8542V28.9583C33.0492 30.4167 31.6 31.4583 30.9789 31.875ZM38.018 30.2083C37.8109 30.1042 37.9145 29.6875 38.432 28.5417C38.6391 28.0208 39.1566 27.1875 39.9848 26.4583L40.1918 27.3958C40.1918 29.2708 38.8461 29.8958 38.018 30.2083Z"
                 fill="#CF649A"
@@ -503,10 +503,10 @@ export default function Home() {
                 gradientUnits="userSpaceOnUse"
                 gradientTransform="translate(15.6739 17.3017) scale(33.4852 33.4852)"
               >
-                <stop stop-color="#AEB2D5" />
-                <stop offset="0.3" stop-color="#AEB2D5" />
-                <stop offset="0.75" stop-color="#484C89" />
-                <stop offset="1" stop-color="#484C89" />
+                <stop stopColor="#AEB2D5" />
+                <stop offset="0.3" stopColor="#AEB2D5" />
+                <stop offset="0.75" stopColor="#484C89" />
+                <stop offset="1" stopColor="#484C89" />
               </radialGradient>
               <clipPath id="clip0_29_128">
                 <rect
@@ -525,7 +525,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_39_59)">
+            <g clipPath="url(#clip0_39_59)">
               <path
                 d="M20.7363 0.275848C20.0745 -0.092275 19.2887 -0.092275 18.627 0.275848L1.2156 10.2164C0.553816 10.5845 0.181641 11.2799 0.181641 12.0162V31.9379C0.181641 32.6743 0.595254 33.3697 1.2156 33.7378L18.627 43.6782C19.2887 44.0465 20.0745 44.0465 20.7363 43.6782L38.1477 33.7378C38.8095 33.3697 39.1816 32.6743 39.1816 31.9379V12.0162C39.1816 11.2799 38.768 10.5845 38.1477 10.2164L20.7363 0.275848Z"
                 fill="url(#paint0_linear_39_59)"
@@ -580,11 +580,11 @@ export default function Home() {
                 y2="3753.36"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stop-color="#41873F" />
-                <stop offset="0.3288" stop-color="#418B3D" />
-                <stop offset="0.6352" stop-color="#419637" />
-                <stop offset="0.9319" stop-color="#3FA92D" />
-                <stop offset="1" stop-color="#3FAE2A" />
+                <stop stopColor="#41873F" />
+                <stop offset="0.3288" stopColor="#418B3D" />
+                <stop offset="0.6352" stopColor="#419637" />
+                <stop offset="0.9319" stopColor="#3FA92D" />
+                <stop offset="1" stopColor="#3FAE2A" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_39_59"
@@ -594,10 +594,10 @@ export default function Home() {
                 y2="-188.213"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.1376" stop-color="#41873F" />
-                <stop offset="0.4032" stop-color="#54A044" />
-                <stop offset="0.7136" stop-color="#66B848" />
-                <stop offset="0.9081" stop-color="#6CC04A" />
+                <stop offset="0.1376" stopColor="#41873F" />
+                <stop offset="0.4032" stopColor="#54A044" />
+                <stop offset="0.7136" stopColor="#66B848" />
+                <stop offset="0.9081" stopColor="#6CC04A" />
               </linearGradient>
               <linearGradient
                 id="paint2_linear_39_59"
@@ -607,10 +607,10 @@ export default function Home() {
                 y2="2198.44"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop offset="0.09192" stop-color="#6CC04A" />
-                <stop offset="0.2864" stop-color="#66B848" />
-                <stop offset="0.5968" stop-color="#54A044" />
-                <stop offset="0.8624" stop-color="#41873F" />
+                <stop offset="0.09192" stopColor="#6CC04A" />
+                <stop offset="0.2864" stopColor="#66B848" />
+                <stop offset="0.5968" stopColor="#54A044" />
+                <stop offset="0.8624" stopColor="#41873F" />
               </linearGradient>
               <clipPath id="clip0_39_59">
                 <rect
@@ -629,7 +629,7 @@ export default function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_29_80)">
+            <g clipPath="url(#clip0_29_80)">
               <path
                 d="M12.6444 41.3988C12.6444 41.3988 10.5116 42.6243 14.0155 43.0838C18.1288 43.5433 20.2616 43.3902 24.8319 42.6243C24.8319 42.6243 26.0506 43.3902 27.7264 44.0029C17.5194 48.4451 4.41783 43.6965 12.6444 41.3988ZM11.2733 35.7312C11.2733 35.7312 8.98815 37.4162 12.4921 37.7225C16.91 38.1821 20.4139 38.1821 26.5077 37.1098C26.5077 37.1098 27.4217 37.8757 28.7928 38.3352C16.3006 42.0115 2.43736 38.6416 11.2733 35.7312Z"
                 fill="#5382A1"
@@ -665,7 +665,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full px-12 my-12">
-        <div className="py-12 bg-[var(--primary-bg)] rounded-xl grid grid-cols-2">
+        <div className="py-12 bg-[var(--primary-bg)] rounded-2xl grid grid-cols-2">
           <div className="relative w-full h-full">
             <Image
               src="/career.png"
@@ -707,6 +707,60 @@ export default function Home() {
               <br />
               Acredito que tudo é possível: com a lógica certa, sempre existe um
               caminho para superar desafios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 px-12 my-12 gap-12">
+        <div className="p-8 bg-[var(--primary-bg)] rounded-2xl">
+          <div className="flex gap-4">
+            <h5 className="text-white font-semibold text-lg">Front-end</h5>
+            <hr className="border-t-2 border-[var(--orange-bg)] my-4 flex-1" />
+          </div>
+          <div className="mt-2 text-white text-sm">
+            <p>
+              Gosto de criar do zero e transformar ideias em experiências vivas
+              no navegador.
+            </p>
+            <br />
+            <p>
+              <span className="font-bold text-[var(--orange-bg)]">
+                Ferramentas:
+              </span>{" "}
+              NextJS, ReatJS, Javascript, HTML, CSS
+            </p>
+            <br />
+            <p>
+              Possuo ampla experiência em frontend, trabalhando tanto com
+              frameworks modernos, como Next.js e React, quanto com JavaScript
+              puro, incluindo manipulação direta da DOM.
+              <br />
+              <br /> Experiencia: 4 anos
+            </p>
+          </div>
+        </div>
+        <div className="p-8 bg-[var(--primary-bg)] rounded-2xl">
+          <div className="flex gap-4">
+            <h5 className="text-white font-semibold text-lg">Back-end</h5>
+            <hr className="border-t-2 border-[var(--orange-bg)] my-4 flex-1" />
+          </div>
+          <div className="mt-2 text-white text-sm">
+            <p>Todo bom site nasce de uma arquitetura bem planejada.</p>
+            <br />
+            <p>
+              <span className="font-bold text-[var(--orange-bg)]">
+                Ferramentas:
+              </span>{" "}
+              PHP, Java, NodeJs.
+            </p>
+            <br />
+            <p>
+              Atuei em projetos de back-end utilizando PHP, Java e Node.js,
+              adquirindo experiência no desenvolvimento de estruturas sólidas e
+              lógicas, sempre focadas organização e boas práticas.
+              <br />
+              <br />
+              Experiencia: 4 anos
             </p>
           </div>
         </div>
