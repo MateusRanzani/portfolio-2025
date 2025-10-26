@@ -764,6 +764,33 @@ export default function Home() {
             </p>
           </div>
         </div>
+        <div className="p-8 bg-[var(--primary-bg)] rounded-2xl">
+          <div className="flex gap-4">
+            <h5 className="text-white font-semibold text-lg">
+              Designer Gráfico
+            </h5>
+            <hr className="border-t-2 border-[var(--orange-bg)] my-4 flex-1" />
+          </div>
+          <div className="mt-2 text-white text-sm">
+            <p>Cada criação começa com uma faísca de criatividade.</p>
+            <br />
+            <p>
+              <span className="font-bold text-[var(--orange-bg)]">
+                Ferramentas:
+              </span>{" "}
+              Figma, Photoshop, Illustrator, CorelDraw.
+            </p>
+            <br />
+            <p>
+              Antes da minha formação, trabalhei como designer gráfico,
+              experiência que hoje me ajuda a criar interfaces criativas,
+              amigáveis e funcionais, unindo estética e usabilidade.
+              <br />
+              <br />
+              Experiencia: 4 anos
+            </p>
+          </div>
+        </div>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
     </>
