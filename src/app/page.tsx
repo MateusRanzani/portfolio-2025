@@ -1,7 +1,17 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const res = await fetch("https://api.github.com/users/mateusranzani/repos", {
+    next: { revalidate: 3600 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao buscar posts");
+  }
+
+  const repos = await res.json();
+
   return (
     <>
       <main className="flex h-screen">
@@ -790,6 +800,29 @@ export default function Home() {
               Experiencia: 4 anos
             </p>
           </div>
+        </div>
+      </div>
+
+      <div className="w-full px-12 my-12 gap-12">
+        <h5 className="text-4xl font-semibold text-white mx-auto w-fit">
+          Meus <span className="text-[var(--orange-bg)]">projetos</span>
+        </h5>
+        <div className="content-buttons"></div>
+
+        <div className="grid grid-cols-3 px-12 my-12 gap-12">
+          <ul>
+            {repos.map((repo: any) => (
+              <li key={repo.id}>
+                <a
+                  href={repo.html_url}
+                  target="_blank"
+                  className="text-blue-500 hover:underline"
+                >
+                  {repo.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
