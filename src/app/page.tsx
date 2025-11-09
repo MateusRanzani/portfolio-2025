@@ -805,7 +805,6 @@ export default async function Home() {
           </div>
         </div>
       </div>
-
       <div className="w-full px-12 my-12 gap-12">
         <h5 className="text-4xl font-semibold text-white mx-auto w-fit">
           Meus <span className="text-[var(--orange-bg)]">projetos</span>
@@ -849,6 +848,124 @@ export default async function Home() {
           </div>
         </div>
       </div>
+      <section className="py-12 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-12">
+        <div className="flex-1">
+          <h2 className="text-4xl font-bold mb-8 text-white">
+            Entre em contato{" "}
+            <span className="text-[var(--orange-bg)]">comigo!</span>
+          </h2>
+
+          <div className="flex items-center gap-4 mb-4">
+            <img
+              src="/avatar.png"
+              alt="Mateus Ranzani"
+              className="w-24 h-24 rounded-full border-4 border-[var(--orange-bg)]"
+            />
+            <div>
+              <h3 className="text-xl font-semibold">Mateus Ranzani</h3>
+              <p className="text-gray-400">Desenvolvedor full-stack</p>
+            </div>
+          </div>
+
+          <ul className="space-y-4 mt-6">
+            <li className="flex items-center gap-3">
+              <div>
+                <p className="font-medium">Email</p>
+                <a
+                  href="mailto:mateusranzani238@gmail.com"
+                  className="text-gray-400 hover:text-[var(--orange-bg)] transition"
+                >
+                  mateusranzani238@gmail.com
+                </a>
+              </div>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <div>
+                <p className="font-medium">LinkedIn</p>
+                <a
+                  href="https://www.linkedin.com/in/mateus-ranzani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[var(--orange-bg)] transition"
+                >
+                  linkedin.com/in/mateus-ranzani
+                </a>
+              </div>
+            </li>
+
+            <li className="flex items-center gap-3">
+              <div>
+                <p className="font-medium">Github</p>
+                <a
+                  href="https://github.com/MateusRanzani"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[var(--orange-bg)] transition"
+                >
+                  github.com/MateusRanzani
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex-1 bg-[#1b1b1b] rounded-2xl p-8 shadow-lg w-full md:w-auto">
+          <form className="space-y-4">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-sm mb-1 text-gray-300"
+              >
+                Nome
+              </label>
+              <input
+                id="name"
+                type="text"
+                placeholder="Digite seu nome"
+                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-sm mb-1 text-gray-300"
+              >
+                Email
+              </label>
+              <input
+                id="email"
+                type="email"
+                placeholder="Digite seu email"
+                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-sm mb-1 text-gray-300"
+              >
+                Mensagem
+              </label>
+              <textarea
+                id="message"
+                rows={4}
+                placeholder="Digite sua mensagem"
+                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-orange-500 hover:bg-[var(--orange-bg)] text-white font-semibold py-3 rounded-lg transition"
+            >
+              Enviar mensagem
+            </button>
+          </form>
+        </div>
+      </section>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
     </>
   );
