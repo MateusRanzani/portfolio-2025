@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Divide } from "lucide-react";
 import Image from "next/image";
 
 export default async function Home() {
@@ -11,6 +12,8 @@ export default async function Home() {
   }
 
   const repos = await res.json();
+
+  console.log(repos);
 
   return (
     <>
@@ -115,7 +118,7 @@ export default async function Home() {
             src="/main.png"
             alt="Imagem principal"
             fill
-            className="object-contain"
+            className="object-cover overflow-visible"
           />
         </div>
       </main>
@@ -809,20 +812,41 @@ export default async function Home() {
         </h5>
         <div className="content-buttons"></div>
 
-        <div className="grid grid-cols-3 px-12 my-12 gap-12">
-          <ul>
+        <div className="max-h-[750px] overflow-y-auto overflow-x-hidden px-12 my-12">
+          <div className="grid grid-cols-3 gap-12">
             {repos.map((repo: any) => (
-              <li key={repo.id}>
+              <div
+                key={repo.id}
+                className="p-4 bg-[var(--primary-bg)] rounded-2xl"
+              >
+                <h5 className="text-white font-semibold text-lg">
+                  {repo.name}
+                </h5>
+                {repo.homepage && (
+                  <div className="text-sm text-gray-400">
+                    Homepage:{" "}
+                    <a
+                      href={repo.homepage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline"
+                    >
+                      {repo.homepage}
+                    </a>
+                  </div>
+                )}
+                <p className="text-white mt-2">{repo.description}</p>
                 <a
                   href={repo.html_url}
                   target="_blank"
-                  className="text-blue-500 hover:underline"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:underline mt-4 block"
                 >
-                  {repo.name}
+                  Ver no GitHub
                 </a>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
