@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function CommentsForm() {
   const [status, setStatus] = useState("");
@@ -25,6 +25,9 @@ export function CommentsForm() {
       setStatus("Erro ao enviar.");
     }
   }
+
+  useEffect(() => {}, []);
+
   return (
     <form action={submitComment} className="space-y-4">
       <div>

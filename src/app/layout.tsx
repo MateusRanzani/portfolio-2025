@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Menu } from "@/components/menu";
+import { AnimationProvider } from "@/providers/animationProvider";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
         className={`${poppins.className} antialiased bg-[var(--secondary-bg)]`}
       >
         <Menu />
-        {children}
+        <AnimationProvider>{children}</AnimationProvider>
       </body>
     </html>
   );
