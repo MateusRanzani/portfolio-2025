@@ -18,13 +18,13 @@ export default async function Home() {
       <main className="flex h-screen">
         <div className="flex items-center flex-1">
           <div className="ml-12 gap-12 grid">
-            <p className="text-[var(--terciary-bg)] text-[32px]">
+            <p className="hero-text-1 text-[var(--terciary-bg)] text-[32px]">
               Olá! Muito prazer, meu nome é Mateus
             </p>
-            <p className="text-[var(--orange-bg)] text-[112px] font-bold text-start text leading-26">
+            <p className="hero-title text-[var(--orange-bg)] text-[112px] font-bold text-start text leading-26">
               Desenvolvedor <br /> Full-stack
             </p>
-            <div className="border-l-2 border-[var(--orange-bg)] pl-2">
+            <div className="hero-desc border-l-2 border-[var(--orange-bg)] pl-2">
               <p className="text-[var(--terciary-bg)] text-xl">
                 Desenvolvedor <b>Full Stack</b> com experiência em&nbsp;
                 <b>Next.js, Nodejs e Java.</b> <br />
@@ -35,10 +35,10 @@ export default async function Home() {
                 tudo é possível. <br />
               </p>
             </div>
-            <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer w-fit px-12 py-6 text-lg">
+            <Button className="hero-btn bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer w-fit px-12 py-6 text-lg">
               Me contate
             </Button>
-            <div className="flex gap-6">
+            <div className="hero-icons flex gap-6">
               <a
                 href="https://github.com/MateusRanzani"
                 target="_blank"
@@ -111,12 +111,12 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="relative w-[504px] h-screen mr-12">
+        <div className="relative w-[504px] h-screen mr-12 image-container">
           <Image
             src="/main.png"
             alt="Imagem principal"
             fill
-            className="object-cover overflow-visible"
+            className="hero-img object-cover overflow-visible"
           />
         </div>
       </main>
