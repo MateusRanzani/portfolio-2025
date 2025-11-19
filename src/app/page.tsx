@@ -909,7 +909,6 @@ export default async function Home() {
             </li>
           </ul>
         </div>
-
         <div className="flex-1 bg-[#1b1b1b] rounded-2xl p-8 shadow-lg w-full md:w-auto">
           <form className="space-y-4">
             <div>
@@ -926,7 +925,6 @@ export default async function Home() {
                 className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
               />
             </div>
-
             <div>
               <label
                 htmlFor="email"
@@ -941,7 +939,6 @@ export default async function Home() {
                 className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
               />
             </div>
-
             <div>
               <label
                 htmlFor="message"
@@ -956,7 +953,6 @@ export default async function Home() {
                 className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
               ></textarea>
             </div>
-
             <button
               type="submit"
               className="w-full bg-orange-500 hover:bg-[var(--orange-bg)] text-white font-semibold py-3 rounded-lg transition"
