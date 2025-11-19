@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Divide } from "lucide-react";
+import { CommentsForm } from "@/components/commentsForm";
 import Image from "next/image";
 
 export default async function Home() {
@@ -12,8 +12,6 @@ export default async function Home() {
   }
 
   const repos = await res.json();
-
-  console.log(repos);
 
   return (
     <>
@@ -910,56 +908,7 @@ export default async function Home() {
           </ul>
         </div>
         <div className="flex-1 bg-[#1b1b1b] rounded-2xl p-8 shadow-lg w-full md:w-auto">
-          <form className="space-y-4">
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-sm mb-1 text-gray-300"
-              >
-                Nome
-              </label>
-              <input
-                id="name"
-                type="text"
-                placeholder="Digite seu nome"
-                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-sm mb-1 text-gray-300"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Digite seu email"
-                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
-              />
-            </div>
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-sm mb-1 text-gray-300"
-              >
-                Mensagem
-              </label>
-              <textarea
-                id="message"
-                rows={4}
-                placeholder="Digite sua mensagem"
-                className="w-full p-3 rounded-lg bg-[#262626] border border-[#333] text-white placeholder-gray-500 focus:outline-none focus:border-[var(--orange-bg)]"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-orange-500 hover:bg-[var(--orange-bg)] text-white font-semibold py-3 rounded-lg transition"
-            >
-              Enviar mensagem
-            </button>
-          </form>
+          <CommentsForm />
         </div>
       </section>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
