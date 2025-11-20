@@ -16,14 +16,35 @@ export function AnimationProvider({ children }: ProviderProps) {
     if (typeof window === "undefined") return;
     gsap.registerPlugin(ScrollTrigger);
 
+    const titleElement = document.querySelector(".hero-title");
+    if (titleElement) {
+      const html = titleElement.innerHTML;
+      const parts = html.split(/(<br\s*\/?>)/gi);
+
+      const finalHtml = parts
+        .map((part) => {
+          if (part.match(/<br\s*\/?>/gi)) {
+            return part;
+          }
+
+          return part
+            .split("")
+            .map((char) => `<span class="hero-title-char">${char}</span>`)
+            .join("");
+        })
+        .join("");
+
+      titleElement.innerHTML = finalHtml;
+    }
+
     const ctx = gsap.context(() => {
       gsap.set(
-        ".hero-text-1, .hero-title, .hero-desc, .hero-btn, .hero-icons a, .hero-img",
+        ".hero-text-1, .hero-title-char, .hero-desc, .hero-btn, .hero-icons a, .hero-img",
         { opacity: 0, filter: "blur(6px)" }
       );
 
       const tl = gsap.timeline({
-        defaults: { ease: "power3.out", duration: 0.6 },
+        defaults: { ease: "power3.out", duration: 0.25 },
       });
 
       tl.fromTo(
@@ -32,16 +53,22 @@ export function AnimationProvider({ children }: ProviderProps) {
         { y: 0, opacity: 1, filter: "blur(0px)" }
       )
         .fromTo(
-          ".hero-title",
-          { scale: 0.95, y: 40 },
-          { scale: 1, y: 0, opacity: 1, filter: "blur(0px)", duration: 0.55 },
+          ".hero-title-char",
+          { y: 40, opacity: 0, filter: "blur(6px)" },
+          {
+            y: 0,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.05,
+            stagger: 0.035,
+          },
           "-=0.3"
         )
         .fromTo(
           ".hero-desc",
           { x: -25 },
           { x: 0, opacity: 1, filter: "blur(0px)", duration: 0.55 },
-          "-=0.35"
+          "-=0.2"
         )
         .fromTo(
           ".hero-btn",
@@ -80,6 +107,25 @@ export function AnimationProvider({ children }: ProviderProps) {
           },
           "-=0.8"
         );
+
+      gsap.fromTo(
+        ".hero-img-wrapper",
+        {
+          y: -40,
+          scale: 1,
+        },
+        {
+          y: 40,
+          scale: 1.02,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".image-container",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 0.8,
+          },
+        }
+      );
     });
 
     return () => ctx.revert();

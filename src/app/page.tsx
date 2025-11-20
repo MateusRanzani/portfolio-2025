@@ -15,7 +15,7 @@ export default async function Home() {
 
   return (
     <>
-      <main className="flex h-screen">
+      <main className="flex gap-8 h-screen">
         <div className="flex items-center flex-1">
           <div className="ml-12 gap-12 grid">
             <p className="hero-text-1 text-[var(--terciary-bg)] text-[32px]">
@@ -111,13 +111,16 @@ export default async function Home() {
             </div>
           </div>
         </div>
-        <div className="relative w-[504px] h-screen mr-12 image-container">
-          <Image
-            src="/main.png"
-            alt="Imagem principal"
-            fill
-            className="hero-img object-cover overflow-visible"
-          />
+
+        <div className="hero-img image-container relative w-[655px] h-screen rounded-b-[655px] mr-12 overflow-hidden">
+          <div className="hero-img-wrapper w-full h-full">
+            <Image
+              src="/main.png"
+              alt="Imagem principal"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </main>
       <div className="w-full px-12 my-14">
