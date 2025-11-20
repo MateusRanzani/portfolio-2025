@@ -72,7 +72,7 @@ export function AnimationProvider({ children }: ProviderProps) {
         )
         .fromTo(
           ".hero-btn",
-          { y: 20 },
+          { y: 0 },
           {
             y: 0,
             opacity: 1,
@@ -107,6 +107,19 @@ export function AnimationProvider({ children }: ProviderProps) {
           },
           "-=0.8"
         );
+
+      tl.add("mostrarBotao", 0.85);
+
+      tl.from(
+        ".hero-btn",
+        {
+          y: -80,
+          duration: 0.2,
+          ease: "bounce",
+          delay: 0.5,
+        },
+        "mostrarBotao"
+      );
 
       gsap.fromTo(
         ".hero-img-wrapper",
