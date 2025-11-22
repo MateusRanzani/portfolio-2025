@@ -14,9 +14,15 @@ interface ProviderProps {
 export function AnimationProvider({ children }: ProviderProps) {
   useEffect(() => {
     if (typeof window === "undefined") return;
-    gsap.registerPlugin(ScrollTrigger);
 
     const titleElement = document.querySelector(".hero-title");
+    const header = document.getElementById("main-header");
+    const nav = document.getElementById("nav-links");
+
+    let lastScroll = 0;
+
+    gsap.registerPlugin(ScrollTrigger);
+
     if (titleElement) {
       const html = titleElement.innerHTML;
       const parts = html.split(/(<br\s*\/?>)/gi);
@@ -96,11 +102,9 @@ export function AnimationProvider({ children }: ProviderProps) {
         )
         .fromTo(
           ".hero-img",
-          { y: -200, opacity: 0, scale: 1.05, filter: "blur(8px)" },
+          { opacity: 0, filter: "blur(8px)" },
           {
-            y: 0,
             opacity: 1,
-            scale: 1,
             filter: "blur(0px)",
             duration: 0.9,
             ease: "power3.out",
@@ -139,6 +143,41 @@ export function AnimationProvider({ children }: ProviderProps) {
           },
         }
       );
+    });
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "max",
+      onUpdate: (self) => {
+        const current = self.scroll();
+
+        const scrollingDown = current > lastScroll && current > 80;
+        const scrollingUp = current < lastScroll;
+
+        if (scrollingDown) {
+          gsap.to(".nav-links", {
+            opacity: 0,
+            width: 0,
+            visibility: "hidden",
+            overflow: "hidden",
+            duration: 0.5,
+            ease: "power2.out",
+          });
+        } else if (scrollingUp || current < 80) {
+          setTimeout(() => {
+            gsap.to(".nav-links", {
+              opacity: 1,
+              width: "auto",
+              visibility: "visible",
+              overflow: "visible",
+              duration: 0.5,
+              ease: "power2.out",
+            });
+          }, 200);
+        }
+
+        lastScroll = current;
+      },
     });
 
     return () => ctx.revert();

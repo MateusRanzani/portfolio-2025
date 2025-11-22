@@ -2,9 +2,11 @@ import { Button } from "@/components/ui/button";
 
 export function Menu() {
   return (
-    <header className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)] rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur">
+    <header
+      id="main-header"
+      className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)] rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur"
+    >
       <nav className="flex items-center justify-between gap-6">
-        {/* Logo */}
         <div className="flex items-center justify-center">
           <div className="w-8 h-8 flex items-center justify-center">
             <svg
@@ -22,40 +24,38 @@ export function Menu() {
           </div>
         </div>
 
-        {/* Navigation Links */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-6 nav-links">
           <a
             href="#apresentacao"
-            className="text-[var(--orange-bg)] font-medium hover:text-accent transition-colors"
+            className="text-[var(--orange-bg)] font-medium hover:text-accent transition-colors whitespace-nowrap"
           >
             Apresentação
           </a>
           <a
             href="#sobre"
-            className="text-white font-medium hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors whitespace-nowrap"
           >
             Sobre mim
           </a>
           <a
             href="#projetos"
-            className="text-white font-medium hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors whitespace-nowrap"
           >
             Projetos
           </a>
           <a
             href="#contato"
-            className="text-white font-medium hover:text-primary transition-colors"
+            className="text-white font-medium hover:text-primary transition-colors whitespace-nowrap"
           >
             Contato
           </a>
         </div>
 
-        {/* Download CV Button */}
-        <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer">
+        <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer hero-download hero-download">
           Download CV
         </Button>
 
-        <div className="flex">
+        <div className="flex nav-links">
           <Button variant="ghost">
             <svg
               width="16"
