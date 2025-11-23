@@ -6,8 +6,8 @@ export function Menu() {
       id="main-header"
       className="fixed top-2 left-1/2 -translate-x-1/2 bg-[rgba(255,255,255,0.02)] rounded-[200px] h-fit w-fit py-2 px-4 z-50 backdrop-blur"
     >
-      <nav className="flex items-center justify-between gap-6">
-        <div className="flex items-center justify-center">
+      <nav className="flex items-center justify-between">
+        <div className="flex items-center justify-center mr-6">
           <div className="w-8 h-8 flex items-center justify-center">
             <svg
               width="53"
@@ -51,7 +51,7 @@ export function Menu() {
           </a>
         </div>
 
-        <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer hero-download hero-download">
+        <Button className="bg-[var(--orange-bg)] rounded-xl hover:bg-accent text-primary-foreground cursor-pointer hero-download hero-download mx-6">
           Download CV
         </Button>
 

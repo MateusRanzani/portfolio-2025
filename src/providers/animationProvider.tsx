@@ -16,10 +16,9 @@ export function AnimationProvider({ children }: ProviderProps) {
     if (typeof window === "undefined") return;
 
     const titleElement = document.querySelector(".hero-title");
-    const header = document.getElementById("main-header");
-    const nav = document.getElementById("nav-links");
 
     let lastScroll = 0;
+    let showTimeout: NodeJS.Timeout | null = null;
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -150,21 +149,52 @@ export function AnimationProvider({ children }: ProviderProps) {
       end: "max",
       onUpdate: (self) => {
         const current = self.scroll();
-
-        const scrollingDown = current > lastScroll && current > 80;
+        const scrollingDown = current > lastScroll && current > 120;
         const scrollingUp = current < lastScroll;
 
+        if (current < 50) {
+          if (showTimeout) clearTimeout(showTimeout);
+
+          gsap.to(".nav-links", {
+            opacity: 1,
+            width: "auto",
+            visibility: "visible",
+            overflow: "visible",
+            duration: 0.4,
+            ease: "power2.out",
+          });
+
+          gsap.to(".hero-download", {
+            marginRight: 24,
+            marginLeft: 24,
+          });
+
+          lastScroll = current;
+          return;
+        }
+
         if (scrollingDown) {
+          if (showTimeout) clearTimeout(showTimeout);
+
           gsap.to(".nav-links", {
             opacity: 0,
             width: 0,
             visibility: "hidden",
             overflow: "hidden",
-            duration: 0.5,
+            duration: 0.4,
             ease: "power2.out",
           });
-        } else if (scrollingUp || current < 80) {
-          setTimeout(() => {
+
+          gsap.to(".hero-download", {
+            marginRight: 0,
+            marginLeft: 0,
+          });
+        }
+
+        if (scrollingUp) {
+          if (showTimeout) clearTimeout(showTimeout);
+
+          showTimeout = setTimeout(() => {
             gsap.to(".nav-links", {
               opacity: 1,
               width: "auto",
@@ -172,6 +202,11 @@ export function AnimationProvider({ children }: ProviderProps) {
               overflow: "visible",
               duration: 0.5,
               ease: "power2.out",
+            });
+
+            gsap.to(".hero-download", {
+              marginRight: 24,
+              marginLeft: 24,
             });
           }, 200);
         }

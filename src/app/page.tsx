@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CommentsForm } from "@/components/commentsForm";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 
 export default async function Home() {
