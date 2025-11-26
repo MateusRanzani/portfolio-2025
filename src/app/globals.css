@@ -81,6 +81,8 @@
   --secondary-bg: #252525;
   --terciary-bg: #e4e4e4;
   --orange-bg: #fd6f00;
+
+  --swiper-wrapper-transition-timing-function: linear !important;
 }
 
 .dark {
