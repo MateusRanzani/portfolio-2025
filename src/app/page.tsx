@@ -258,10 +258,19 @@ export default async function Home() {
         <h5 className="text-4xl font-semibold text-white mx-auto w-fit">
           Meus <span className="text-[var(--orange-bg)]">projetos</span>
         </h5>
+        <div className="text-center text-white font-thin mt-4">
+          {repos.length} projetos atualmente
+        </div>
         <div className="content-buttons"></div>
 
-        <div className="max-h-[750px] overflow-y-auto overflow-x-hidden px-12 my-12">
-          <div className="grid grid-cols-3 gap-12">
+        <div
+          className="max-h-[750px] overflow-y-auto overflow-x-hidden my-12 overflow-y-scroll
+            [&::-webkit-scrollbar]:w-2
+            [&::-webkit-scrollbar-track]:bg-transparent
+            [&::-webkit-scrollbar-thumb]:bg-[var(--orange-bg)]
+            [&::-webkit-scrollbar-thumb]:rounded-full"
+        >
+          <div className="grid gap-4">
             {repos.map((repo: any) => (
               <div
                 key={repo.id}
